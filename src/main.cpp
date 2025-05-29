@@ -1,14 +1,15 @@
 #include "raylib.h"
 
+/*
 void rbt() {
- mazegen_rbt();
- mazesolve_rbt();
+ int mazegen_rbt();
+ int mazesolve_rbt();
 }
 void anim() {
 static void mazesolve_anim();
 static void mazegen_anim();
 }
-
+*/
 static void checktemplate();
 
 void rbt()  { } // mazesolve_rbt & mazegen_rbt  defined here due to same recursive backtracking logic
@@ -21,10 +22,13 @@ static void mazesolve_anim() { } // animate maze solving
 
 // DS-struct.h
 
+const int rows = 30;
+const int cols = 30;
+
 struct cell {
   bool visited = false;
   int wall[4];
-}
+};
   cell Maze[cols][rows];
 
 int main() {
